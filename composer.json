@@ -1,12 +1,12 @@
 {
-  "name": "vendor_name/inherit-relations",
-  "description": "description",
+  "name": "tschallacka/storm-inherit-relations",
+  "description": "A simple dependency for the WinterCMS Storm library database models that enables inheriting relations defined in parent models",
   "minimum-stability": "stable",
-  "license": "proprietary",
+  "license": "MIT",
   "authors": [
     {
-      "name": "tschallacka",
-      "email": "email@example.com"
+      "name": "Tschallacka",
+      "email": "tschallacka@outlook.com"
     }
   ],
   "require": {
