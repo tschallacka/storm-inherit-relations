@@ -1,0 +1,14 @@
+{
+  "name": "vendor_name/inherit-relations",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "tschallacka",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+  }
+}
