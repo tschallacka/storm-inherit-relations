@@ -9,6 +9,11 @@
       "email": "tschallacka@outlook.com"
     }
   ],
+  "autoload": {
+    "psr-4": {
+      "Tschallacka\\StormInheritRelations\\": "src/"
+    }
+  },
   "require": {
   }
 }
