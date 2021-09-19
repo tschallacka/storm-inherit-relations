@@ -1,7 +1,8 @@
 {
-  "name": "tschallacka/storm-inherit-relations",
+    "name": "tschallacka/storm-inherit-relations",
   "description": "A simple dependency for the WinterCMS Storm library database models that enables inheriting relations defined in parent models",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
+  "prefer-stable" : true,
   "license": "MIT",
   "authors": [
     {

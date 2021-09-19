@@ -2,6 +2,7 @@
 
 namespace Tschallacka\StormInheritRelations\Behavior;
 
+use Winter\Storm\Database\Model;
 use Winter\Storm\Extension\ExtensionBase;
 
 class InheritRelations extends ExtensionBase
@@ -11,14 +12,23 @@ class InheritRelations extends ExtensionBase
     public function __construct($parent)
     {
         $key = get_class($parent);
+        if ($parent instanceof Model && !isset(self::$cache[$key])) {
 
-        if(!isset(self::$cache[$key])) {
             $ancestors = class_parents($parent);
             $base_relations = $parent->getRelationDefinitions();
 
             foreach ($ancestors as $ancestor) {
-                $instance = $ancestor;
-                if(method_exists($instance, 'getRelationDefinitions')) {
+                try {
+                    $refl = new \ReflectionClass($ancestor);
+                } catch (\ReflectionException $e) {
+                    continue;
+                }
+                if($refl->isAbstract() || $refl->isInterface() || $refl->isTrait()) {
+                    continue;
+                }
+
+                $instance = new $ancestor();
+                if (method_exists($instance, 'getRelationDefinitions')) {
                     $relations = $instance->getRelationDefinitions();
                     $base_relations = array_merge_recursive($relations, $base_relations);
                 }
