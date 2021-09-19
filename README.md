@@ -62,7 +62,7 @@ In a model in which you wish to glean the relationships defined in
 the parents add this to your `$implements` array:
 
 ```php
-public $implements = [\Tschallacka\StormInheritRelations\Behavior\InheritRelations];
+public $implement = [\Tschallacka\StormInheritRelations\Behavior\InheritRelations];
 ```
 
 Model example:
