@@ -44,7 +44,7 @@ and wouldn't be very [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 
 I'm a coder, I'm lazy and don't like copy pasting the same thing ove rand over.
 I would propose having an implementation that you can inject in a class you deem needing it.   
-For example the utmost base class AttributeValue, this ensures all 
+For example the utmost base class `AttributeValue`, this ensures all 
 the children have it, and it doesn't need to be copy pasted over and 
 over again.
 
